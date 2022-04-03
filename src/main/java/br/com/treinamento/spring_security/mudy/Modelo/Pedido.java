@@ -1,9 +1,17 @@
 package br.com.treinamento.spring_security.mudy.Modelo;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "tb_pedido")
 public class Pedido {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String nomeProduto;
     private BigDecimal valorNegociado;
     private LocalDate dataEntrega;
