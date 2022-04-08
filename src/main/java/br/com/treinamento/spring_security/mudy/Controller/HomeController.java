@@ -1,7 +1,7 @@
 package br.com.treinamento.spring_security.mudy.Controller;
 
 import br.com.treinamento.spring_security.mudy.Modelo.Pedido;
-import br.com.treinamento.spring_security.mudy.Repository.HomeRepository;
+import br.com.treinamento.spring_security.mudy.Repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    private HomeRepository repository;
+    private PedidoRepository repository;
 
     @GetMapping(value = "/home")
     public String hello(Model model) {
