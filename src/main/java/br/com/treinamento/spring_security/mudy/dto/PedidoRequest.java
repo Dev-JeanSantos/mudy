@@ -1,5 +1,6 @@
 package br.com.treinamento.spring_security.mudy.dto;
 
+import br.com.treinamento.spring_security.mudy.Enum.StatusPedido;
 import br.com.treinamento.spring_security.mudy.Modelo.Pedido;
 
 import javax.validation.constraints.NotBlank;
@@ -63,6 +64,7 @@ public class PedidoRequest {
         pedido.setUrlProduto(urlProduto);
         pedido.setUrlImagem(urlImagem);
         pedido.setDescricao(descricao);
+        pedido.setStatus(StatusPedido.AGUARDANDO);
         return pedido;
     }
 }
